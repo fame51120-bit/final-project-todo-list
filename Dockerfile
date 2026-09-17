@@ -1,4 +1,4 @@
-# Stage 1: Builder
+   # Stage 1: Builder
 FROM python:3.11-slim AS builder
 WORKDIR /app
 COPY requirements.txt .
@@ -9,7 +9,7 @@ FROM python:3.11-slim
 WORKDIR /app
 RUN useradd -m appuser
 COPY --from=builder /root/.local /home/appuser/.local
-COPY app.py security.html ./
+COPY app.py security.html performance.html ./
 COPY tasks.json* ./
 RUN chown -R appuser:appuser /app
 USER appuser
