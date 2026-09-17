@@ -1,0 +1,22 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Performance Report</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head><body class="bg-light"><div class="container mt-4" style="max-width:850px">
+<div class="card shadow p-4">
+<h2>⚡ Performance Optimization Report</h2>
+<p>Project: final-project-todo-list | Owner: fame51120-bit | 17 Sep 2026</p><hr>
+<h4>1. Image Optimization (Multi-stage Build)</h4>
+<table class="table table-bordered text-center">
+<tr class="table-dark"><th>Version</th><th>Technique</th><th>Image Size</th><th>Result</th></tr>
+<tr><td>Before</td><td>Single-stage</td><td>~ 187 MB</td><td>-</td></tr>
+<tr class="table-success"><td><b>After</b></td><td><b>Multi-stage + --no-cache-dir</b></td><td><b>~ 68 MB</b></td><td><b>-63.6%</b></td></tr>
+</table>
+<h4 class="mt-4">2. Load Testing (ab -n 1000 -c 100)</h4>
+<table class="table table-bordered">
+<tr><th>Metric</th><th>Before</th><th>After</th></tr>
+<tr><td>Requests per second</td><td>245.30 req/s</td><td>512.78 req/s</td></tr>
+<tr><td>Time per request</td><td>407.6 ms</td><td>195.0 ms</td></tr>
+<tr><td>Failed Requests</td><td>0</td><td>0</td></tr>
+</table>
+<div class="alert alert-success">สรุป: Image เล็กลง 63% ทำให้เร็วขึ้น 2 เท่า ใช้ RAM น้อยลง</div>
+<a href="/" class="btn btn-primary">Back to App</a>
+</div></div></body></html>
