@@ -29,7 +29,7 @@ HTML = """
 <div class="container mt-4" style="max-width:650px">
 <div class="card shadow p-4">
 <h3 class="text-center">✅ My To-Do List - Secure & Live!</h3>
-<p class="text-center text-muted small">fame51120-bit | DevOps & DevSecOps Success</p>
+<p class="text-center text-muted small">fame51120-bit | DevOps & DevSecOps Final Project</p>
 <form method="POST" action="/add" class="d-flex gap-2 my-3">
 <input name="task" class="form-control" placeholder="เพิ่มงานใหม่..." required>
 <button class="btn btn-primary">เพิ่ม</button>
@@ -75,6 +75,11 @@ def delete(id):
 @app.route("/tasks")
 def tasks_api():
     return jsonify(load_tasks())
+
+@app.route("/security.html")
+def security():
+    with open("security.html", "r", encoding="utf-8") as f:
+        return f.read()
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
